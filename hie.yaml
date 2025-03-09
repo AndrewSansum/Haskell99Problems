@@ -1,0 +1,10 @@
+cradle:
+  cabal:
+    - path: "src"
+      component: "lib:H99"
+
+    - path: "app/Main.hs"
+      component: "H99:exe:H99-exe"
+
+    - path: "test"
+      component: "H99:test:H99-test"
