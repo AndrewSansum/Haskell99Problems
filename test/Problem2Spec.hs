@@ -11,6 +11,7 @@ test_EmptyList_ReturnsNothing =
         ( assertEqual "" Nothing (myButLast ([] :: [Int]))
         )
     )
+
 test_Singleton_ReturnsNothing :: Test
 test_Singleton_ReturnsNothing =
   TestLabel
@@ -25,7 +26,7 @@ test_List_ReturnsButLast =
   TestLabel
     "[a, b] should return a as it is second to last"
     ( TestCase
-        ( assertEqual "" Nothing (myButLast ([0, 1] :: [Int]))
+        ( assertEqual "" (Just 0) (myButLast ([0, 1] :: [Int]))
         )
     )
 
