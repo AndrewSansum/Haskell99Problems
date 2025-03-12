@@ -4,4 +4,8 @@ Project to implement and test problems provided at https://wiki.haskell.org/inde
 
 ## Running this project
 
-This project was created with Stack v3.3.1. To run tests, run `stack test` in the project folder.
+This project was created with Stack v3.3.1.
+
+To show implementations working, run `stack run`.
+
+To run tests, run `stack test` in the project folder.
