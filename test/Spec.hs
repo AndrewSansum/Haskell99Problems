@@ -1,5 +1,18 @@
 import Problem1Spec (problem1Tests)
-import Test.HUnit (runTestTT)
+import Problem2Spec (problem2Tests)
+import Test.HUnit (Test (TestLabel, TestList), runTestTT)
+
+allTests :: Test
+allTests =
+  TestLabel
+    "\nTests for all problems:\n\n"
+    ( TestList
+        [ problem1Tests,
+          problem2Tests
+        ]
+    )
 
 main :: IO ()
-main = do print =<< runTestTT problem1Tests
+main = do
+  counts <- runTestTT allTests
+  print counts
